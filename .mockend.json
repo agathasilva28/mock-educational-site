@@ -5,6 +5,144 @@
     },
     "email": { 
       "regexp": "#[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "instructors": {
+      "hasMany": "Instructor"
+    },
+    "courses": {
+      "hasMany": "Course"
+    },
+    "userProgress": {
+      "hasMany": "UserProgress"
+    }
+  },
+  "Instructor": {
+    "name": {
+      "string": {}
+    },
+    "description": {
+      "loremParagraphs": { "minLength": 1, "maxLength": 2 }
+    },
+    "email": { 
+      "regexp": "#[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "phone": { 
+      "regexp": "(0[1-9]{2}) [1-9]{5}-[1-9]{4}"
+    },
+    "stars": {
+      "regexp": "[1-4]{1}.[1-9]{1}"
+    },
+    "courses": {
+      "hasMany": "Course"
+    }
+  },
+  "Course": {
+    "title": {
+      "loremWords": { "minLength": 5, "maxLength": 10 }
+    },
+    "body": {
+      "loremParagraphs": { "minLength": 3, "maxLength": 5 }
+    },
+    "stars": {
+      "regexp": "[1-4]{1}.[1-9]{1}"
+    },
+    "Classes": {
+      "hasMany": "Reply"
+    },
+    "Users": {
+      "hasMany": "User"
+    },
+    "ourseReviews": {
+      "hasMany": "CourseReview"
+    }
+  },
+  "Class" : {
+    "title": {
+      "loremWords": { "minLength": 5, "maxLength": 10 }
+    },
+    "body": {
+      "loremParagraphs": { "minLength": 3, "maxLength": 5 }
+    },
+    "stars": {
+      "regexp": "[1-4]{1}.[1-9]{1}"
+    },
+    "course": {
+      "belongsTo": "Course"
+    },
+    "comments": {
+      "hasMany": "Comment"
+    }
+  },
+  "InstructorReview": {
+    "title": {
+      "loremWords": { "minLength": 5, "maxLength": 10 }
+    },
+    "body": {
+      "loremParagraphs": { "minLength": 3, "maxLength": 5 }
+    },
+    "stars": {
+      "regexp": "[1-4]{1}.[1-9]{1}"
+    },
+    "instructor": {
+      "belongsTo": "Instructor"
+    }
+  },
+  "CourseReview": {
+    "title": {
+      "loremWords": { "minLength": 5, "maxLength": 10 }
+    },
+    "body": {
+      "loremParagraphs": { "minLength": 3, "maxLength": 5 }
+    },
+    "stars": {
+      "regexp": "[1-4]{1}.[1-9]{1}"
+    },
+    "course": {
+      "belongsTo": "Course"
+    }
+  },
+  "Comment": {
+    "title": {
+      "loremWords": { "minLength": 5, "maxLength": 10 }
+    },
+    "body": {
+      "loremParagraphs": { "minLength": 3, "maxLength": 5 }
+    },
+    "class": {
+      "belongsTo": "Class"
+    }
+  },
+  "UserProgress": {
+    "course": {
+      "belongsTo": "Course"
+    },
+    "user": {
+      "belongsTo": "User"
+    },
+    "percent":{
+      "int": { "min": 0, "max": 100 }
+    }
+  },
+  "Post": {
+    "title": {
+      "loremWords": { "minLength": 5, "maxLength": 10 }
+    },
+    "body": {
+      "loremParagraphs": { "minLength": 3, "maxLength": 5 }
+    },
+    "replies": {
+      "hasMany": "Reply"
+    }
+  },
+  "Reply":{
+    "title": {
+      "loremWords": { "minLength": 5, "maxLength": 10 }
+    },
+    "body": {
+      "loremParagraphs": { "minLength": 3, "maxLength": 5 }
+    },
+    "post": {
+      "belongsTo": "Post"
     }
   }
 }
