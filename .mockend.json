@@ -6,14 +6,8 @@
     "email": { 
       "regexp": "#[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
     },
-    "instructors": {
-      "hasMany": "Instructor"
-    },
     "courses": {
       "hasMany": "Course"
-    },
-    "userProgress": {
-      "hasMany": "UserProgress"
     }
   },
   "Instructor": {
