@@ -6,8 +6,14 @@
     "email": { 
       "regexp": "#[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
     },
+    "instructors": {
+      "hasMany": "Instructor"
+    },
     "courses": {
       "hasMany": "Course"
+    },
+    "Progress": {
+      "hasMany": "Progress"
     }
   },
   "Instructor": {
@@ -28,6 +34,9 @@
     },
     "courses": {
       "hasMany": "Course"
+    },
+    "reviews": {
+      "hasMany": "Instructoreview"
     }
   },
   "Course": {
@@ -46,8 +55,8 @@
     "Users": {
       "hasMany": "User"
     },
-    "ourseReviews": {
-      "hasMany": "CourseReview"
+    "reviews": {
+      "hasMany": "Coursereview"
     }
   },
   "Class" : {
@@ -67,7 +76,7 @@
       "hasMany": "Comment"
     }
   },
-  "InstructorReview": {
+  "Instructoreview": {
     "title": {
       "loremWords": { "minLength": 5, "maxLength": 10 }
     },
@@ -81,7 +90,7 @@
       "belongsTo": "Instructor"
     }
   },
-  "CourseReview": {
+  "Coursereview": {
     "title": {
       "loremWords": { "minLength": 5, "maxLength": 10 }
     },
@@ -106,7 +115,7 @@
       "belongsTo": "Class"
     }
   },
-  "UserProgress": {
+  "Progress": {
     "course": {
       "belongsTo": "Course"
     },
