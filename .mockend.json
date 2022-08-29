@@ -1,7 +1,14 @@
 {
   "User": {
     "name": {
-      "string": {}
+      "string": [
+        "Tina Bolton",
+        "Tianna Nielsen",
+        "Rebekah Lynn",
+        "Alfie Best",
+        "Courtney Murray",
+        "Edwin Sharp"
+      ]
     },
     "email": { 
       "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
