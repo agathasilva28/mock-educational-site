@@ -21,6 +21,9 @@
     },
     "Progress": {
       "hasMany": "Progress"
+    },
+    "picture": {
+      "string": "https://i.pravatar.cc/300"
     }
   },
   "Instructor": {
@@ -44,6 +47,9 @@
     },
     "reviews": {
       "hasMany": "Instructoreview"
+    },
+    "picture": {
+      "string": "https://i.pravatar.cc/300"
     }
   },
   "Course": {
