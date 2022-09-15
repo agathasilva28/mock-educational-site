@@ -23,7 +23,7 @@
       "hasMany": "Progress"
     },
     "picture": {
-      "string": "https://i.pravatar.cc/300"
+      "string": [ "https://i.pravatar.cc/300" ]
     }
   },
   "Instructor": {
@@ -49,7 +49,7 @@
       "hasMany": "Instructoreview"
     },
     "picture": {
-      "string": "https://i.pravatar.cc/300"
+      "string": [ "https://i.pravatar.cc/300" ]
     }
   },
   "Course": {
