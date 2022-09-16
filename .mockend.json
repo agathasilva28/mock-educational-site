@@ -28,7 +28,14 @@
   },
   "Instructor": {
     "name": {
-      "string": {}
+      "string": [
+        "Tina Bolton",
+        "Tianna Nielsen",
+        "Rebekah Lynn",
+        "Alfie Best",
+        "Courtney Murray",
+        "Edwin Sharp"
+      ]
     },
     "description": {
       "loremParagraphs": { "minLength": 1, "maxLength": 2 }
