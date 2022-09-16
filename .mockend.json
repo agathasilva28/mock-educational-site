@@ -42,6 +42,9 @@
     "stars": {
       "regexp": "[1-4]{1}.[1-9]{1}"
     },
+    "phone": {
+      "regexp": "[1-9]{2} [1-9]{4} [1-9]{5}"
+    },
     "courses": {
       "hasMany": "Course"
     },
